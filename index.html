@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<style>
+		.item {
+			display: block;
+			border: 1px solid;
+			margin: .5em;
+			padding: .25em;
+		}
+	</style>
+	<body>
+		<div class='item'><a href="https://destinyitemmanager.com/">Destiny item manager</a></div>
+
+		<div class='item'>
+		<form action="https://www.google.com/search" method="get" id="searchform">
+			<legend><a href='google.com'>Google</a> for destiny 2 term</legend>
+			<input type="text" id="searchfor" name="q">
+			<input type="submit" value="🔍">
+		</form>
+		</div>
+		
+		<div class='item'>
+		<form action="https://www.light.gg/db/search/" method="get" id="lightform">
+			<legend>search items on <a href='https://www.light.gg'>light.gg</a></legend>
+			<input type="text" id="lightfor" name="q">
+			<input type="submit" value="🔍">
+		</form>
+		</div>
+
+		<script>
+			document.getElementById("searchform").addEventListener("submit", ()=>{
+				let sterm = document.getElementById("searchfor")
+				let newtext = "destiny 2 " + sterm.value
+				sterm.value = newtext
+			})
+		</script>
+	</body>
+</html>
